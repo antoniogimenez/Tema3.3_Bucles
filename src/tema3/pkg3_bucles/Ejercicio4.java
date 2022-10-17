@@ -27,15 +27,28 @@ public class Ejercicio4 {
         System.out.println("Dime el numero del que quieres saber los multiplos: ");
         num = Integer .parseInt(s.nextLine());
         
-        do{
-            i=i+5;
-
-        } while (i<=50);
-        System.out.println("Los multiplos de "+num+" son "+contador);
+//        int i=0;
+//        do{
+//            System.out.println(i);
+//            i=i+5;
+//        } while (i<=50);
+//        System.out.println("Los multiplos de "+num+" son "+contador);
         
-        for(int i = 0;i <= 50;i=i+5){
-            System.out.println(i);
-        }
+//        for(int i = 0;i <= 10;i=i+5){
+//            System.out.println(i);
+//        }
+        
+//        while(i<=50){
+//            System.out.println(i);
+//            i=i+5;
+//        }
+            
+          for(int i=100;i>50;i--){
+              if(i%2==0){
+                  System.out.println(i);
+              }
+          }
+
     }
     
 }
