@@ -21,15 +21,16 @@ public class Ejercicio6 {
         int pin;
         boolean contraseña = false;
         
-        int intentos=0;
-        while((intentos>0) && (contraseña)){
-            System.out.println("Dime una contraseña: ");
+        int intentos=4;
+        
+        while((intentos>0) && (!contraseña)){
+            System.out.println("Te quedan "+intentos+" restantes");
             pin = Integer.parseInt(s.nextLine());
-            if(contraseña){
-                 intentos++;
-            } else{
-                System.out.println("Contraseña acertada");
-            }
+            if(pin == 1234){
+                contraseña=true;
+                System.out.println("Contraseña correcta");
+                System.out.println("Abriendo caja fuerte....");
+            } intentos--;
             
             
         }
