@@ -19,8 +19,8 @@ public class Ejercicio8 {
         // TODO code application logic here
         Scanner s = new Scanner (System.in);
         
-        int num, negativo;
-        int i= 0;
+        int num;
+        boolean negativo=false;
         do{
             System.out.println("Dime un numero: ");
             num = Integer.parseInt(s.nextLine());
@@ -31,11 +31,14 @@ public class Ejercicio8 {
                 System.out.println("El numero introducido es un 0");
             } else{
                 System.out.println("El numero introducido es NEGATIVO");
-                negativo = num+i;
+                negativo = true;
             }      
         } while (num != 0);
-        negativo = Integer.parseInt(s.nextLine());
-        System.out.println("El numero negativo introducido es "+negativo);
+        if (negativo==true){
+            System.out.println("Hay numeros negativos introducidos");
+        } else {
+            System.out.println("No hemos introducido numeros negativos");
+        }
     }
     
 }
