@@ -30,8 +30,11 @@ public class Ejercicio6 {
                 contraseña=true;
                 System.out.println("Contraseña correcta");
                 System.out.println("Abriendo caja fuerte....");
-            } intentos--;
-            
+            } 
+            intentos--;
+            if (intentos == 0){
+                System.out.println("Intentos agotados");
+            }
             
         }
         
