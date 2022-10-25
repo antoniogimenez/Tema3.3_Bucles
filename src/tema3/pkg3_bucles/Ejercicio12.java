@@ -23,22 +23,37 @@ public class Ejercicio12 {
         int posicionArroba = 0, posicionPunto = 0;
         boolean tieneArroba = false;
         boolean tienePunto = false;
+
         
-        System.out.println("Dime una dirreccion de correo: ");
-        correo = s.nextLine();
-        
-        for (int i =0; i<correo.length();i++){
-            char caracter = correo.charAt(i);
-            System.out.println(caracter);
+        do{
+            System.out.println("Dime una dirreccion de correo: ");
+            correo = s.nextLine();
             
-            if (caracter == ('@') && caracter == ('.')){
-                tieneArroba = true;
-                
+            for (int i =0; i<correo.length();i++){
+                char caracter = correo.charAt(i);
+                System.out.println(caracter);
+
+                if (caracter == ('@')){
+                    tieneArroba = true;
+                    posicionArroba=i;                
+                }
+                if (caracter == ('.')){
+                    tienePunto = true;
+                    posicionPunto =i; // i para guardar la posicion
+                }                      
             }
-            
-            
+        if (tieneArroba == true && tienePunto == true && posicionArroba < posicionPunto){
+                System.out.println("***CORRECTO***");
+        } else{
+                System.out.println("***INCORRECTO***");
         }
+        //Reseteo banderas y contadores
+        tieneArroba = false;
+        tienePunto = false;
+        posicionArroba = 0;
+        posicionPunto = 0;
         
+        }while(!correo.equals(""));
         
     }
     
